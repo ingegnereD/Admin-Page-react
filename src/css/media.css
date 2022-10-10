@@ -1,0 +1,1002 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:wght@300;400;500;700;800&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+small {
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+}
+
+button {
+  padding: 0.25rem 0.85rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #e6e6e6;
+  background-color: #6666FF;
+  border: none;
+  border-radius: 0.25rem;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #8080FF;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FAF6FE;
+}
+
+::-webkit-scrollbar {
+  width: 0rem;
+  height: 0rem;
+  background-color: #FAF6FE;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0rem;
+}
+
+.container {
+  width: 99%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 5rem calc(100vh - 5rem);
+}
+.container header {
+  z-index: 9;
+  margin-bottom: 0.75rem;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container header .left {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+}
+.container header .left article {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.container header .left article .menu-bar {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 0.75rem;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.container header .left article img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.3rem;
+}
+.container header .left article h2 {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container header .left article h2 span {
+  color: #FF1A1A;
+}
+.container header .left article #close-bar {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 0.35rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container header .center {
+  padding-left: 0.5rem;
+  width: 58%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.container header .center article {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  width: 5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.container header .center .extra {
+  margin: auto 0;
+  height: 100%;
+  width: 9rem;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+.container header .center .extra h2 {
+  font-size: 1.75rem;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+}
+.container header .center .extra input {
+  width: 9rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 1px solid #8080FF;
+}
+.container header .right-end {
+  width: 24%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+.container header .right-end .theme {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-items: center;
+}
+.container header .right-end .theme .light,
+.container header .right-end .theme .dark {
+  color: #262626;
+  font-size: 1.3rem;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+.container header .right-end .theme .light {
+  background-color: #6666FF;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: white;
+}
+.container header .right-end .theme .dark {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  background-color: #FAF6FE;
+}
+.container header .right-end .name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 3.5rem;
+  margin: auto 0;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  place-items: center;
+}
+.container header .right-end .name h4 {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 400;
+}
+.container header .right-end .name h4 b {
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+.container header .right-end .name small {
+  display: flex;
+  align-items: flex-start;
+}
+.container header .right-end img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  padding: 0.2rem;
+  background-color: #8080FF;
+}
+.container main {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container main .main-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container main .main-cont .aside {
+  z-index: 9;
+  background-color: #FAF6FE;
+  width: 18%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+}
+.container main .main-cont .aside .aside-main {
+  width: 100%;
+  height: calc(100vh - 5rem);
+}
+.container main .main-cont .aside .aside-main .collection {
+  width: 100%;
+  height: 100%;
+}
+.container main .main-cont .aside .aside-main .collection li {
+  list-style: none;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  transition: all 300ms ease;
+  border-radius: 0.3rem;
+}
+.container main .main-cont .aside .aside-main .collection li a {
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container main .main-cont .aside .aside-main .collection li a .icon {
+  width: 2.5rem;
+}
+.container main .main-cont .aside .aside-main .collection li a .icon .aside-icon {
+  font-size: 1.5rem;
+  color: #4D4DFF;
+}
+.container main .main-cont .aside .aside-main .collection li a .text {
+  font-size: 1.1rem;
+  font-family: "Manrope", sans-serif;
+  color: #262626;
+  margin-right: 1.2rem;
+}
+.container main .main-cont .aside .aside-main .collection li a .text h4 {
+  font-weight: 500;
+}
+.container main .main-cont .aside .aside-main .collection li a p {
+  background-color: #FF1A1A;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.container main .main-cont .aside .aside-main .collection li:hover {
+  padding-left: 1rem;
+  background-color: #8080FF;
+}
+.container main .main-cont .aside .aside-main .collection li:hover .icon .aside-icon {
+  color: white;
+}
+.container main .main-cont .aside .aside-main .collection li:hover .text {
+  color: white;
+}
+.container main .main-cont .aside .aside-main .collection .back {
+  padding-left: 0.5rem;
+}
+.container main .main-cont .aside .aside-main .collection .back a .icon {
+  width: 2.5rem;
+  font-size: 1.5rem;
+  color: #F97325;
+}
+.container main .main-cont .aside .aside-main .collection .back:hover a .icon {
+  color: #F97325;
+}
+.container main .main-cont .aside .aside-main .collection .log-out {
+  padding-left: 0.5rem;
+  background-color: #FAF6FE;
+  border: 1px solid #8080FF;
+}
+.container main .main-cont .aside .aside-main .collection .log-out a .icon {
+  width: 2.5rem;
+  font-size: 1.5rem;
+  color: #FF1A1A;
+}
+.container main .main-cont .aside .aside-main .collection .log-out a .text {
+  color: #262626;
+}
+.container main .main-cont .aside .aside-main .collection .log-out:hover {
+  padding: 0.5rem;
+  border: none;
+  background-color: #F97325;
+}
+.container main .main-cont .aside .aside-main .collection .log-out:hover a .icon {
+  color: white;
+}
+.container main .main-cont .aside .aside-main .collection .log-out:hover .text {
+  color: white;
+}
+.container main .main-cont .middle {
+  padding-left: 0.5rem;
+  width: 58%;
+  height: 100%;
+  overflow-y: auto;
+}
+.container main .main-cont .middle ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.container main .main-cont .middle .main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container main .main-cont .middle .main .cont {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 0.5rem;
+}
+.container main .main-cont .middle .main .cont .title {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+}
+.container main .main-cont .middle .main .cont .title .extra {
+  margin: auto 0;
+  height: 100%;
+  width: 9rem;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+.container main .main-cont .middle .main .cont .title .extra h2 {
+  font-size: 1.75rem;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .title .extra input {
+  width: 9rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 1px solid #8080FF;
+}
+.container main .main-cont .middle .main .cont .card-cont {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.75rem;
+}
+.container main .main-cont .middle .main .cont .card-cont .card {
+  width: 100%;
+  height: 15rem;
+  background-color: white;
+  border: 1px solid #6666FF;
+  height: 15rem;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left {
+  height: 100%;
+  width: 55%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 0.75rem;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left article {
+  background-color: #6666FF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10rem;
+  font-size: 2rem;
+  color: white;
+  border: none;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left #expenses {
+  background-color: #FF1A1A;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left #income {
+  background-color: #00CC00;
+  font-size: 1.85rem;
+  padding: 0.65rem 0.65rem;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left .info h3 {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .left .info h2 {
+  font-size: 1.65rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .right {
+  width: 45%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .right svg {
+  width: 85%;
+  height: 85%;
+  display: grid;
+  place-items: center;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .right svg circle {
+  fill: none;
+  stroke: #8080FF;
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .right .number {
+  position: absolute;
+  right: 50%;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+  display: none;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .sales svg circle {
+  stroke-dasharray: 200;
+  stroke-dashoffset: -50;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .expenses svg circle {
+  stroke: #FF1A1A;
+  stroke-dasharray: 200;
+  stroke-dashoffset: -140;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .top .income svg circle {
+  stroke: #00CC00;
+  stroke-dasharray: 200;
+  stroke-dashoffset: -70;
+}
+.container main .main-cont .middle .main .cont .card-cont .card .foot {
+  width: 100%;
+  height: 10%;
+}
+.container main .main-cont .middle .main .cont .orders {
+  width: 100%;
+  height: calc(100vh - 5rem - 15rem - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+.container main .main-cont .middle .main .cont .orders .nav {
+  width: 100%;
+  height: 2.5rem;
+  margin-left: 0;
+}
+.container main .main-cont .middle .main .cont .orders .nav h2 {
+  font-size: 1.75rem;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .orders .invoice {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: end;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table {
+  background-color: #CCCCFF;
+  width: 100%;
+  height: auto;
+  border-collapse: separate;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table thead {
+  width: 100%;
+  height: 100%;
+  height: 2.75rem;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table thead tr {
+  background-color: #FAF6FE;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table thead tr th {
+  font-size: 1.15rem;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr {
+  height: 2.35rem;
+  background-color: #FAF6FE;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button {
+  margin: 0 auto;
+  padding: 0.25rem 0.65rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.5rem;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul {
+  border: 1px solid #8080FF;
+  border-radius: 0.2rem;
+  z-index: 9;
+  width: 11rem;
+  position: absolute;
+  top: 1.75rem;
+  right: 0rem;
+  background-color: white;
+  z-index: 9;
+  padding: 0;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul li {
+  width: 100%;
+  height: 2.35rem;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #262626;
+  transition: all 300ms ease;
+  margin-right: -0.25rem;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul li:hover {
+  background-color: #8080FF;
+  color: white;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul li:first-child {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul li:last-child {
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.container main .main-cont .middle .main .cont .orders .invoice table tbody tr td button ul li:last-child:hover {
+  background-color: #FF1A1A;
+}
+.container main .main-cont .right-area {
+  width: 24%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  padding-left: 0.5rem;
+  gap: 0.5rem;
+}
+.container main .main-cont .right-area .update {
+  width: 100%;
+  height: 15rem;
+}
+.container main .main-cont .right-area .update ::-webkit-scrollbar {
+  width: 0;
+}
+.container main .main-cont .right-area .update .cont {
+  border: 1px solid #8080FF;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 0.45rem 0.35rem;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.25rem;
+}
+.container main .main-cont .right-area .update .cont .customer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.container main .main-cont .right-area .update .cont .customer img {
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 0.2rem;
+  background-color: #8080FF;
+  border-radius: 100%;
+}
+.container main .main-cont .right-area .update .cont .customer .right {
+  width: calc(100% - 3.4rem - 0.5rem);
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+.container main .main-cont .right-area .update .cont .customer .right h4 {
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+  font-weight: 500;
+}
+.container main .main-cont .right-area .analytics {
+  width: 100%;
+  height: calc(100vh - 5rem - 15rem);
+  display: grid;
+  grid-template-rows: 2.5rem auto 5rem;
+  gap: 0.5rem;
+}
+.container main .main-cont .right-area .analytics .nav {
+  background-color: #FAF6FE;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.container main .main-cont .right-area .analytics .nav h2 {
+  font-size: 1.75;
+  font-family: "Manrope", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .right-area .analytics .main {
+  width: 100%;
+  height: 100%;
+}
+.container main .main-cont .right-area .analytics .main .cont {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 0.75rem;
+}
+.container main .main-cont .right-area .analytics .main .cont .card {
+  border: 1px solid #6666FF;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.5rem;
+  place-items: center;
+}
+.container main .main-cont .right-area .analytics .main .cont .card .icon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.75rem;
+  padding: 0.75rem;
+  border-radius: 100%;
+  color: white;
+}
+.container main .main-cont .right-area .analytics .main .cont .card .title {
+  margin: auto 0;
+  width: 100%;
+  height: 65%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  place-items: start;
+}
+.container main .main-cont .right-area .analytics .main .cont .card .title h3 {
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .right-area .analytics .main .cont .card .percent,
+.container main .main-cont .right-area .analytics .main .cont .card .id {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #262626;
+}
+.container main .main-cont .right-area .analytics .main .cont .card .id {
+  font-weight: 500;
+}
+.container main .main-cont .right-area .analytics .main .cont .online .icon {
+  background-color: #8080FF;
+  font-size: 1.65rem;
+  padding: 0.75rem 0.75rem;
+}
+.container main .main-cont .right-area .analytics .main .cont .offline .icon {
+  padding: 0.65rem 0.85rem;
+  background-color: #F97325;
+}
+.container main .main-cont .right-area .analytics .main .cont .new-customer .icon {
+  padding: 0.65rem 0.85rem;
+  background-color: #00CC00;
+}
+.container main .main-cont .right-area .analytics .add-product {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container main .main-cont .right-area .analytics .add-product button {
+  width: 100%;
+  height: 70%;
+  margin-top: 0.2rem;
+  font-size: 1.3rem;
+  transition: all 300ms ease;
+}
+.container main .main-cont .right-area .analytics .add-product button:hover {
+  border: 1px solid #6666FF;
+  background-color: #FAF6FE;
+  color: #8080FF;
+}
+
+@media screen and (max-width: 1330px) {
+  .container {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container header .left {
+    width: 10%;
+  }
+  .container header .left article h2 {
+    display: none;
+  }
+  .container header .center {
+    width: 57%;
+  }
+  .container header .right-end {
+    width: 33%;
+  }
+  .container main .main-cont .aside {
+    width: 10%;
+  }
+  .container main .main-cont .aside .aside-main .collection li {
+    padding-right: 0.2rem;
+    justify-content: center;
+    position: relative;
+  }
+  .container main .main-cont .aside .aside-main .collection li h4 {
+    display: none;
+  }
+  .container main .main-cont .aside .aside-main .collection li p {
+    position: absolute;
+    right: 0.75rem;
+    transition: all 300ms ease;
+  }
+  .container main .main-cont .aside .aside-main .collection li:hover {
+    padding-left: 0.5rem;
+  }
+  .container main .main-cont .aside .aside-main .collection li:hover p {
+    right: 0.3rem;
+  }
+  .container main .main-cont .middle {
+    width: 57%;
+  }
+  .container main .main-cont .right-area {
+    width: 33%;
+  }
+  .container .middle {
+    width: 57%;
+  }
+  .container .middle .main {
+    overflow-y: auto;
+    height: 100%;
+  }
+  .container .middle .main .cont {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+  .container .middle .main .cont .card-cont .card {
+    height: 16rem;
+  }
+  .container .middle .main .cont .orders {
+    width: 100%;
+    height: calc(100vh - 5rem - 16rem - 1rem);
+  }
+  .container .right-area {
+    width: 33%;
+  }
+  .container .right-area .update {
+    height: 16rem;
+  }
+  .container .right-area .update .cont {
+    gap: 0.35rem;
+  }
+  .container .right-area .analytics {
+    width: 100%;
+    height: calc(100vh - 5rem - 16rem);
+  }
+}
+@media screen and (max-width: 991px) {
+  .container {
+    position: relative;
+  }
+  .container header .left {
+    width: 16%;
+    justify-content: center;
+  }
+  .container header .left article {
+    width: 100%;
+    position: relative;
+  }
+  .container header .left img {
+    display: none;
+  }
+  .container header .center {
+    width: 40%;
+  }
+  .container header .right-end {
+    width: 44%;
+  }
+  .container main .main-cont .aside {
+    height: calc(100vh - 5rem);
+    top: 5rem;
+    position: absolute;
+    left: -50rem;
+    width: 14rem;
+  }
+  .container main .main-cont .aside .aside-main {
+    background-color: #FAF6FE;
+  }
+  .container main .main-cont .aside .aside-main .collection li {
+    justify-content: start;
+  }
+  .container main .main-cont .aside .aside-main .collection li h4 {
+    display: block;
+  }
+  .container main .main-cont .aside .aside-main .collection li p {
+    position: initial;
+    transition: all 300ms ease;
+  }
+  .container main .main-cont .aside .aside-main .collection li:hover p {
+    right: 0rem;
+  }
+  .container main .main-cont .active-Aside {
+    position: absolute;
+    left: -50rem;
+    -webkit-animation: slideIn 600ms ease forwards;
+            animation: slideIn 600ms ease forwards;
+  }
+  .container main .main-cont .inactive-Aside {
+    position: absolute;
+    left: 0rem;
+    -webkit-animation: slideOut 600ms ease forwards;
+            animation: slideOut 600ms ease forwards;
+  }
+  @-webkit-keyframes slideIn {
+    100% {
+      left: 0rem;
+    }
+  }
+  @keyframes slideIn {
+    100% {
+      left: 0rem;
+    }
+  }
+  @-webkit-keyframes slideOut {
+    to {
+      left: -50rem;
+    }
+  }
+  @keyframes slideOut {
+    to {
+      left: -50rem;
+    }
+  }
+  .container main .main-cont .middle {
+    width: 55%;
+    padding: 0;
+  }
+  .container main .main-cont .middle .main .cont .card-cont .card .top .left {
+    gap: 1.25rem;
+  }
+  .container main .main-cont .middle .main .cont .orders {
+    overflow-x: auto;
+  }
+  .container main .main-cont .middle .main .cont .orders .invoice {
+    min-width: 37.5rem;
+  }
+  .container main .main-cont .right-area {
+    width: 45%;
+  }
+  .container .middle {
+    width: 55%;
+  }
+  .container .right-area {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    overflow-y: auto;
+    width: 98%;
+  }
+  .container header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .container header .right-end .name {
+    display: none;
+  }
+  .container main {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    overflow-y: auto;
+  }
+  .container main .main-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .container main .main-cont .middle {
+    width: 100%;
+  }
+  .container main .main-cont .middle .orders .invoice {
+    width: 100%;
+  }
+  .container main .main-cont .middle .orders .invoice table {
+    width: 100%;
+  }
+  .container main .main-cont .right-area {
+    width: 100%;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=media.css.map */

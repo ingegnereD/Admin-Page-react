@@ -1,0 +1,258 @@
+@import "style.scss";
+@media screen and (max-width: 1330px) {
+    .container {
+        gap: 0;
+        .aside {
+            .nav {
+                article {
+                    h2 {
+                        // @include font(1.5rem, $font-mont, $text-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// smaller pcs width of 992 - 1200px
+@media screen and (max-width: 1200px) {
+    .body {}
+    .container {
+        header {
+            .left {
+                width: 10%;
+                article {
+                    h2 {
+                        display: none;
+                    }
+                }
+            }
+            .center {
+                width: 57%;
+            }
+            .right-end {
+                width: 33%;
+            }
+        }
+        main {
+            .main-cont {
+                .aside {
+                    width: 10%;
+                    .aside-main {
+                        .collection {
+                            li {
+                                padding-right: .2rem;
+                                justify-content: center;
+                                position: relative;
+                                h4 {
+                                    display: none;
+                                }
+                                p {
+                                    position: absolute;
+                                    right: .75rem;
+                                    transition: all 300ms ease;
+                                }
+                                &:hover {
+                                    p {
+                                        right: .3rem;
+                                    }
+                                    padding-left: .5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width: 57%;
+                }
+                .right-area {
+                    width: 33%;
+                }
+            }
+        }
+        .middle {
+            width: 57%;
+            .main {
+                overflow-y: auto;
+                height: 100%;
+                .cont {
+                    overflow-y: auto;
+                    @include area;
+                    @include autoRow(3);
+                    gap: .5rem;
+                    .card-cont {
+                        .card {
+                            height: 16rem;
+                        }
+                    }
+                    .orders {
+                        @include area(calc(100vh - 5rem - 16rem - 1rem), 100%);
+                    }
+                }
+            }
+        }
+        .right-area {
+            width: 33%;
+            .update {
+                height: 16rem;
+                .cont {
+                    gap: .35rem;
+                }
+            }
+            .analytics {
+                @include area(calc(100vh - 5rem - 16rem), 100%);
+            }
+        }
+    }
+}
+
+// tablets from 768 - 991px 
+@media screen and (max-width: 991px) {
+    .container {
+        position: relative;
+        header {
+            .left {
+                width: 16%;
+                justify-content: center;
+                article {
+                    width: 100%;
+                    position: relative;
+                }
+                img {
+                    display: none;
+                }
+            }
+            .center {
+                width: 40%;
+            }
+            .right-end {
+                width: 44%;
+            }
+        }
+        main {
+            .main-cont {
+                .aside {
+                    height: calc(100vh - 5rem);
+                    top: 5rem;
+                    position: absolute;
+                    left: -50rem;
+                    width: 14rem;
+                    .aside-main {
+                        // width: 15rem;
+                        background-color: $bg-color;
+                        .collection {
+                            li {
+                                justify-content: start;
+                                h4 {
+                                    display: block;
+                                }
+                                p {
+                                    position: initial;
+                                    // right: .5rem;
+                                    transition: all 300ms ease;
+                                }
+                                &:hover {
+                                    p {
+                                        right: 0rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .active-Aside {
+                    position: absolute;
+                    left: -50rem;
+                    animation: slideIn 600ms ease forwards;
+                }
+                .inactive-Aside {
+                    position: absolute;
+                    left: 0rem;
+                    animation: slideOut 600ms ease forwards;
+                }
+                @keyframes slideIn {
+                    100% {
+                        left: 0rem;
+                    }
+                }
+                @keyframes slideOut {
+                    to {
+                        left: -50rem;
+                    }
+                }
+                .middle {
+                    width: 55%;
+                    padding: 0;
+                    .main {
+                        .cont {
+                            .card-cont {
+                                .card {
+                                    .top {
+                                        .left {
+                                            gap: 1.25rem;
+                                        }
+                                    }
+                                }
+                            }
+                            .orders {
+                                overflow-x: auto;
+                                .invoice {
+                                    min-width: 37.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right-area {
+                    width: 45%;
+                }
+            }
+        }
+        .middle {
+            width: 55%;
+        }
+        .right-area {
+            width: 45%;
+        }
+    }
+}
+
+// mobile from x-768
+@media screen and (max-width: 768px) {
+    .container {
+        overflow-y: auto;
+        width: 98%;
+        header {
+            position: sticky;
+            top: 0;
+            .right-end {
+                .name {
+                    display: none;
+                }
+            }
+        }
+        main {
+            height: max-content;
+            overflow-y: auto;
+            .main-cont {
+                @include flex(column, center, flex-start);
+                gap: 1rem;
+                .middle {
+                    width: 100%;
+                    .orders {
+                        .invoice {
+                            width: 100%;
+                            table {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .right-area {
+                    width: 100%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
