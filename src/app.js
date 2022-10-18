@@ -4,6 +4,7 @@ import { BsPerson } from "react-icons/fa";
 import { asideLink } from './asideLink';
 import { CardInfoSal, CardInfoExp, CardInfoInc ,table, customer, analytic, LightTheme, DarkTheme, AddBtnIcon, OnlineAnalytics, OfflineAnalytics, CustomerAnalytics, BackArrow, LogoutIcon, Bars, Caret} from './asideLink';
 import logo from './img/logo.jpg'
+import Clogo from './img/cLogo.png'
 
 function AddButton(){
     const [dropDown,  setDropDown] = useState(false)
@@ -95,7 +96,7 @@ const App = () => {
                 <section className="left">
                      <article>
                         {menuBar && <span className='menu-bar' onClick={showMenu}><Bars /></span>}
-                        <img src={logo} alt="" />
+                        <img src={Clogo} alt="" />
                         <h2>IRG-<span>CNS</span></h2>
                     </article>
                 </section>
